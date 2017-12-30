@@ -10,9 +10,14 @@
 
 <body>
     <div id="react-container"></div>
-    <script>
+    <script type="text/babel">
         ReactDOM.render(
-            React.createElement('div', null, 'Hello World'),
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            ,
             document.getElementById('react-container')
         );
     </script>
