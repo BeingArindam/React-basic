@@ -11,15 +11,15 @@
 <body>
     <div id="react-container"></div>
     <script type="text/babel">
-        ReactDOM.render(
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
-            ,
-            document.getElementById('react-container')
-        );
+        function MyComponent(props) { return (
+        <div>
+            <h3>Hello World {props.text}</h3>
+            <p>{props.children}</p>
+        </div>); } ReactDOM.render(<div>
+                <MyComponent text="Arindam Mondal">This is message One </MyComponent>
+                <MyComponent text="Arindam Mondal">This is my React Component!</MyComponent>
+                <MyComponent text="Arindam Mondal">This nested component!</MyComponent>
+            </div>, document.getElementById('react-container') );
     </script>
 </body>
 
